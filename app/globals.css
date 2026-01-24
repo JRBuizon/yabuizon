@@ -24,7 +24,11 @@ span {
 
 html {
   scroll-behavior: smooth;
-  background-color: black;
+  background-color: #111;
+}
+
+body {
+  background-color: #111;
 }
 
 

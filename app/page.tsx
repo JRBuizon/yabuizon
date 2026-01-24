@@ -70,7 +70,7 @@ export default function Landing() {
   return (
     <div className={clsx("overflow-hidden text-white relative bg-[#111] grid-cols-1 w-full h-[100vh] flex flex-col items-center justify-center", grabbing && "cursor-grabbing")}>
       <div className={clsx("transition-all duration-[2s] ease-in-out absolute flex flex-col justify-center items-center w-full h-[100%] z-[100] bg-[#fff]", !loading && "translate-x-[-100%]")} />
-      <Draggable onStart={() => setGrabbing(true)} onStop={() => setGrabbing(false)} >
+      <Draggable cancel="a" onStart={() => setGrabbing(true)} onStop={() => setGrabbing(false)} >
         <div className={clsx("relative select-none",)}>
           {matrix.length > 0 && matrix[0].length > 0 && <pre className={clsx("z-[1] absolute top-0 right-0 leading-none font-bold text-[9px] pointer-events-none", mono.className)}>
             {[...Array(asciiRows).keys()].map(row =>
